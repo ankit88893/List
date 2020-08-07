@@ -20,7 +20,7 @@ public class SetMain {
         Student student4 = new Student(12, "a123");
         set.add(student4);
         
-        
+        System.out.println("printing list of set");
        
         Iterator<Student> iterator = set.iterator();
         while (iterator.hasNext()) {
