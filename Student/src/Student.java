@@ -30,16 +30,16 @@ public class Student {
 	        return age;
 	    }
 	    @Override
-	    public boolean equals(Object arg) {
-	        if(this==arg) {
+	    public boolean equals(Object obj) {
+	        if(this==obj) {
 	            return true;
 	        }
 
-	        if(arg==null || !(arg instanceof Student) ) {
+	        if(obj==null || !(obj instanceof Student) ) {
 	            return false;
 	        }
 
-	        Student that=(Student) arg;
+	        Student that=(Student) obj;
 	        boolean isequal=this.age==that.age;
 	        return isequal;
 	    }
