@@ -25,5 +25,23 @@ public class Student {
 	public void setRollno(String rollno) {
 		this.rollno = rollno;
 	}
+	  @Override
+	    public int hashCode() {
+	        return age;
+	    }
+	    @Override
+	    public boolean equals(Object arg) {
+	        if(this==arg) {
+	            return true;
+	        }
+
+	        if(arg==null || !(arg instanceof Student) ) {
+	            return false;
+	        }
+
+	        Student that=(Student) arg;
+	        boolean isequal=this.age==that.age;
+	        return isequal;
+	    }
 
 }
