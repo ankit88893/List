@@ -2,12 +2,12 @@ import java.util.*;
 
 public class SetMain {
 
-    public static void main(String[] args) {
-    	SetMain demo = new SetMain();
-    	demo.runApp();
-    }
-    
-    public void runApp() {
+	public static void main(String[] args) {
+		SetMain demo = new SetMain();
+		demo.runApp();
+	}
+
+	public void runApp() {
 
         Set<Student> set = new LinkedHashSet<>();
 
@@ -27,13 +27,25 @@ public class SetMain {
             
             Student student = iterator.next();
             
-            System.out.println("element =" + student.getAge() + " " + student.getRollno());
+            System.out.println("element  age =" + student.getAge() + "rollno=:- " + student.getRollno());
         }
         
-        System.out.println("printing list of set greater than 21");
+      List<Student> stdAge= new ArrayList<Student>(set);
+      System.out.println("printing list of set greater than 21");
+    
+      display(stdAge);
+	}
+      
+      public void display(List<Student> stdAge) {
+    	  for(Student std : stdAge) {
+    		  int age= std.getAge();
+    		  if(age>21)
+    		  {
+    			  System.out.print(age);
+    		  }
+    	  }
+    	  
+      }
        
-            
-        }
-
-
     }
+
