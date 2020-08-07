@@ -39,9 +39,12 @@ public class SetMain {
       public void display(List<Student> stdAge) {
     	  for(Student std : stdAge) {
     		  int age= std.getAge();
+    		  String rollno= std.getRollno();
     		  if(age>21)
     		  {
     			  System.out.print(age);
+    			  System.out.print("                   ");
+    			  System.out.print(rollno);
     		  }
     	  }
     	  
